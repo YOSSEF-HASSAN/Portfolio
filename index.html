@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yossef - UI/UX Designer & Frontend Developer Portfolio. Creating beautiful, responsive web experiences using modern technologies.">
+    <title>Yossef | Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <a href="#home" class="nav-icon active" data-tooltip="Home">
+            <i class="fas fa-home"></i>
+        </a>
+        <a href="#about" class="nav-icon" data-tooltip="About">
+            <i class="fas fa-user"></i>
+        </a>
+        <a href="#portfolio" class="nav-icon" data-tooltip="Portfolio">
+            <i class="fas fa-briefcase"></i>
+        </a>
+        <a href="#contact" class="nav-icon" data-tooltip="Contact">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- ==================== HOME SECTION ==================== -->
+        <section id="home" class="section home-section">
+            <div class="home-content">
+                <div class="avatar-wrapper">
+                    <div class="avatar-glow"></div>
+                    <img src="image.jpeg" alt="Youssef" class="avatar-img">
+                </div>
+                <h1 class="hero-title">Hi, I'm <span class="highlight">Youssef</span></h1>
+                <div class="typing-wrapper">
+                    <span class="typing-text" id="typingText">I'm a Front-End Developer</span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    I create beautiful, responsive web experiences using modern technologies.
+                    <br>Passionate about clean code and user-centered design.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span>Scroll Down</span>
+            </div>
+        </section>
+
+        <!-- ==================== ABOUT SECTION ==================== -->
+        <section id="about" class="section about-section">
+            <div class="section-container">
+                <h2 class="section-title">My <span class="highlight">Skills</span></h2>
+                <div class="about-grid">
+                    <div class="about-image-wrapper">
+                        <img src="img2.jpeg" alt="About Me" class="about-image">
+                    </div>
+                    <div class="about-content">
+                        <p class="about-text">
+                            I'm a passionate web developer with 2 years of experience
+                            creating modern, responsive web applications. I specialize in
+                            frontend development using cutting-edge technologies to deliver
+                            exceptional user experiences.
+                        </p>
+                        <div class="skills-list">
+                            <div class="skill-item" data-percent="85">
+                                <div class="skill-header">
+                                    <div class="skill-name">
+                                        <i class="fab fa-css3-alt skill-icon tailwind"></i>
+                                        <span>Tailwind</span>
+                                    </div>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="--fill-width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-percent="80">
+                                <div class="skill-header">
+                                    <div class="skill-name">
+                                        <i class="fab fa-python skill-icon python"></i>
+                                        <span>Python</span>
+                                    </div>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="--fill-width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-percent="90">
+                                <div class="skill-header">
+                                    <div class="skill-name">
+                                        <i class="fab fa-bootstrap skill-icon bootstrap"></i>
+                                        <span>Bootstrap</span>
+                                    </div>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="--fill-width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-percent="95">
+                                <div class="skill-header">
+                                    <div class="skill-name">
+                                        <i class="fab fa-html5 skill-icon html"></i>
+                                        <span>HTML/CSS</span>
+                                    </div>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="--fill-width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-percent="80">
+                                <div class="skill-header">
+                                    <div class="skill-name">
+                                        <i class="fab fa-js skill-icon js"></i>
+                                        <span>Javascript</span>
+                                    </div>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="--fill-width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PORTFOLIO SECTION ==================== -->
+        <section id="portfolio" class="section portfolio-section">
+            <div class="section-container">
+                <h2 class="section-title">My <span class="highlight">Portfolio</span></h2>
+                <p class="section-subtitle">A collection of my recent projects</p>
+                <div class="portfolio-grid">
+                    <div class="project-card" data-aos="fade-up">
+                        <div class="project-image">
+                            <img src="foodlover.png" alt="Modern E-Commerce Platform">
+                            <div class="project-overlay">
+                                <a href="https://yossef-hassan.github.io/Food-Lover-JS/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com/YOSSEF-HASSAN/Food-Lover-JS" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Food Lover Website</h3>
+                            <p class="project-desc">Food Lover is a modern and responsive food-themed website designed to showcase delicious meals in an attractive and user-friendly way. The project focuses on creating a visually engaging experience, combining clean layout, smooth navigation, and high-quality food presentation.</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-image">
+                            <img src="Appexy.png" alt="Task Management App">
+                            <div class="project-overlay">
+                                <a href="https://yossef-hassan.github.io/APPEXY-W-TAILWAND" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com/YOSSEF-HASSAN/APPEXY-W-TAILWAND" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">APPEXY Landing Page</h3>
+                            <p class="project-desc">APPEXY is a modern and responsive landing page built using Tailwind CSS, designed to present digital products, startups, or services in a clean and professional way. The project focuses on delivering a high-quality user experience through a minimalist design, smooth layout, and well-structured sections.</p>
+                            <div class="project-tags">
+                                <span class="tag">Tailwind</span>
+                                <span class="tag">HTML</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-image">
+                            <img src="strict.png" alt="Weather Dashboard">
+                            <div class="project-overlay">
+                                <a href="https://yossef-hassan.github.io/Strict-Page/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com/YOSSEF-HASSAN/Strict-Page" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Strict Landing Page</h3>
+                            <p class="project-desc">Strict Page is a clean and modern landing page designed with a focus on simplicity, readability, and structured layout. The project showcases a minimal design approach where content is clearly organized, making it easy for users to navigate and understand the purpose of the website.</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="project-image">
+                            <img src="educonnect.png" alt="educonnect Website">
+                            <div class="project-overlay">
+                                <a href="https://yossef-hassan.github.io/EDUCONNECT-1/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com/YOSSEF-HASSAN/EDUCONNECT-1" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">EduConnect – Educational Platform Website</h3>
+                            <p class="project-desc">EduConnect is a modern educational platform designed to connect students, mentors, and learning resources in one interactive environment. The project focuses on transforming traditional learning into a more collaborative and engaging experience, where users can learn, share, and grow together.</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">React</span>
+                                <span class="tag">Tailwind</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CONTACT SECTION ==================== -->
+        <section id="contact" class="section contact-section">
+            <div class="section-container">
+                <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+                <p class="section-subtitle">Feel free to reach out for collaborations or just a friendly hello</p>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>engyha08@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Alexandria, Egypt</p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+20 1554630766</p>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/YOSSEF-HASSAN" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/youssef-hassan-abdel-latif-a36a22338/" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://wa.me/201554630766?text=Hello%20I%20want%20to%20contact%20you" target="_blank" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a> 
+                       </div>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" placeholder="Subject" required>
+                            <label for="subject">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    
+    <!-- Email JS Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("YOUR_PUBLIC_KEY");
+        })();
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
