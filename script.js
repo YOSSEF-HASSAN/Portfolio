@@ -156,12 +156,11 @@ document.addEventListener('DOMContentLoaded', () => {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            subject: document.getElementById('subject').value,
-            message: document.getElementById('message').value
-        };
+        const nameVal = document.getElementById('name').value;
+        const emailVal = document.getElementById('email').value;
+        const subjectVal = document.getElementById('subject').value;
+        const messageVal = document.getElementById('message').value;
+        const honeypotVal = document.getElementById('honeypot').value;
 
         // Animate the button
         const submitBtn = contactForm.querySelector('.btn-submit');
@@ -169,8 +168,43 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.innerHTML = '<span>Sending...</span><i class="fas fa-spinner fa-spin"></i>';
         submitBtn.disabled = true;
 
-        // Simulate sending (replace with actual API call)
-        setTimeout(() => {
+        // If honeypot is filled, it's a bot submission. Ignore and pretend it succeeded.
+        if (honeypotVal) {
+            setTimeout(() => {
+                submitBtn.innerHTML = '<span>Message Sent!</span><i class="fas fa-check"></i>';
+                submitBtn.style.background = 'linear-gradient(135deg, #00c853, #00e676)';
+
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalContent;
+                    submitBtn.style.background = '';
+                    submitBtn.disabled = false;
+                    contactForm.reset();
+                }, 3000);
+            }, 1000);
+            return;
+        }
+
+        // Send request to FormSubmit AJAX endpoint
+        fetch("https://formsubmit.co/ajax/engyha08@gmail.com", {
+            method: "POST",
+            headers: { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                name: nameVal,
+                email: emailVal,
+                _subject: `New Portfolio Message: ${subjectVal}`,
+                message: messageVal
+            })
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            }
+            throw new Error('Network response was not ok.');
+        })
+        .then(data => {
             submitBtn.innerHTML = '<span>Message Sent!</span><i class="fas fa-check"></i>';
             submitBtn.style.background = 'linear-gradient(135deg, #00c853, #00e676)';
 
@@ -181,7 +215,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 submitBtn.disabled = false;
                 contactForm.reset();
             }, 3000);
-        }, 1500);
+        })
+        .catch(error => {
+            console.error('Error submitting form:', error);
+            submitBtn.innerHTML = '<span>Error! Try Again</span><i class="fas fa-exclamation-triangle"></i>';
+            submitBtn.style.background = 'linear-gradient(135deg, #ff1744, #ff5252)';
+
+            // Reset after 4 seconds to allow retry
+            setTimeout(() => {
+                submitBtn.innerHTML = originalContent;
+                submitBtn.style.background = '';
+                submitBtn.disabled = false;
+            }, 4000);
+        });
     });
 
     // ==========================================
